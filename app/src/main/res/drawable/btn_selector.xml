@@ -1,10 +1,33 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:state_pressed="true"
-        android:drawable="@color/colorDivider"/>
 
-    <item android:drawable="@color/red" />
-    <item android:state_active="true" android:drawable="@color/colorAccent"/>
-    <item android:state_hovered="true" android:drawable="@color/yellow"/>
 
+    <item android:state_pressed="true" >
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <!--<stroke android:width="2dp" android:color="@color/black" />-->
+            <solid android:color="@color/colorDivider"/>
+            <padding android:left="5dp" android:top="2dp"
+                android:right="5dp" android:bottom="2dp" />
+            <corners android:radius="90dp"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="90dp"/>
+            <!--<stroke-->
+            <!--android:width="3dp"-->
+            <!--android:color="#000000"/>-->
+            <solid android:color="@color/red"/>
+        </shape>
+    </item>
+    <item android:state_hovered="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="90dp"/>
+            <!--<stroke-->
+            <!--android:width="3dp"-->
+            <!--android:color="#000000"/>-->
+            <solid android:color="@color/colorPrimaryDark1"/>
+        </shape>
+    </item>
 </selector>
