@@ -6,23 +6,23 @@
         android:id="@+id/frameLayout5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#b3673ab7"
         tools:context="com.example.habibaabbasii.testcase.ui.fragments.EditProfileFragment">
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/toolbar"
             android:layout_width="0dp"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/toolbarColor"
+            android:background="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/menu"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:padding="8dp"
-                android:src="@drawable/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -34,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Edit Profile"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -56,10 +57,12 @@
         <EditText
             android:id="@+id/name"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginTop="8dp"
             android:hint="Name"
-            android:layout_margin="8dp"
+            android:padding="15dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/round_input"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/image"
@@ -68,20 +71,26 @@
         <EditText
             android:id="@+id/contact"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginTop="8dp"
             android:hint="Contact"
-            android:layout_margin="8dp"
+            android:padding="15dp"
+            android:background="@drawable/round_input"
+            android:layout_margin="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name"
             />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Edit"
+            android:text="EDIT"
+            android:background="@drawable/btn_selector"
             android:id="@+id/edit"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:textColor="@color/colorWhite"
             android:textAllCaps="false"
             app:layout_constraintTop_toBottomOf="@id/contact"
             app:layout_constraintStart_toStartOf="parent"

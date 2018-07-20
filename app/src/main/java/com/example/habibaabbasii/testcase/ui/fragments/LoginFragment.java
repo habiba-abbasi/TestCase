@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import com.example.habibaabbasii.testcase.Constants;
@@ -37,10 +38,11 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     private OnFragmentInteractionListener mListener;
     FragmentLoginBinding binding;
 
+    //AnimationUtils animationUtils;
     FirebaseAuth mAuth;
     DatabaseReference mRef;
     ProgressDialog progressDialog;
-
+Context context;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -52,8 +54,10 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
         progressDialog = new ProgressDialog(getContext());
 
-        setUpListeners();
 
+        setUpListeners();
+//        animationUtils= AnimationUtils.loadAnimation(LoginFragment.this,R.anim.slide_in_left);
+//        binding.login.startAnimation(animationUtils);
         return binding.getRoot();
     }
 
@@ -83,6 +87,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+
+
 
         if (view == binding.login) {
 

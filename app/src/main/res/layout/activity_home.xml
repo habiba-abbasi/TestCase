@@ -4,86 +4,113 @@
     <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
         android:id="@+id/drawer"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.example.habibaabbasii.testcase.ui.activities.HomeActivity">
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:background="@color/colorWhite"
-            >
 
-            <View
+            android:background="@color/colorWhite">
+
+            <include
                 android:id="@+id/v1"
+                layout="@layout/nav_header_main"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="190dp" />
+            <!--<View-->
+            <!--android:id="@+id/v1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--android:background="@drawable/background_material_red"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"/>-->
+            <ImageView
+                android:id="@+id/img_home"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_home"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/v1" />
 
             <TextView
-                android:text="Home"
                 android:id="@+id/home"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:padding="12dp"
-                app:layout_constraintTop_toBottomOf="@+id/v1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:text="Home"
+                app:layout_constraintLeft_toRightOf="@id/img_home"
+                app:layout_constraintTop_toBottomOf="@+id/v1" />
 
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:background="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/home"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home" />
+
+            <ImageView
+                android:id="@+id/profile_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_profile_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home" />
 
             <TextView
-                android:text="Edit Profile"
                 android:id="@+id/editProfile"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:padding="12dp"
-                app:layout_constraintTop_toBottomOf="@+id/home"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:text="Edit Profile"
+                app:layout_constraintLeft_toRightOf="@id/profile_edit"
+                app:layout_constraintTop_toBottomOf="@id/home" />
 
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:background="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/editProfile"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editProfile" />
 
+            <ImageView
+                android:id="@+id/img_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_logout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editProfile" />
 
             <TextView
-                android:text="Logout"
                 android:id="@+id/logout"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:padding="12dp"
-                app:layout_constraintTop_toBottomOf="@+id/editProfile"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:text="Logout"
+                app:layout_constraintLeft_toRightOf="@id/img_logout"
+                app:layout_constraintTop_toBottomOf="@+id/editProfile" />
 
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:background="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/editProfile"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editProfile" />
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v4.widget.DrawerLayout>
